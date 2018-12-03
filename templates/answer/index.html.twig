@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{controller_name}}{% endblock %}
+{% block body %}
+  <h1>List of answers</h1>
+
+
+  <table class="table table-striped text-center">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Question</th>
+        <th>Answer</th>
+        <th>Correct</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for answer in answers %}
+        <tr>
+          <td>{{answer.id}}</td>
+          <td>{{answer.question.label}}</td>
+          <td>{{answer.label}}</td>
+          {% if answer.correct %}
+            <td>Yes</td>
+          {% else %}
+            <td>No</td>
+          {% endif %}
+          <td>
+            <a class="btn btn-secondary btn-sm" href="{{path('answer_edit', {'id':answer.id})}}">Edit</a>
+            <a class="btn btn-danger btn-sm" href="{{path('answer_delete', {'id':answer.id})}}">Delete</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <a class="btn btn-dark" href="{{path('answer_add')}}">Add answer</a>
+{% endblock %}

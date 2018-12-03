@@ -1,0 +1,109 @@
+html, body{
+  height:100%;
+  background-color: whitesmoke;
+  cursor:default;
+}
+
+html{
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body{
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.5;
+  color: #333;
+  text-align: left;
+  text-shadow:0 0.05rem 0.1rem rgba(3, 3, 3, .01);
+}
+
+body > header{
+  font-weight:500;
+}
+body > header > div{
+  min-height:3.75rem
+}
+body > header > div > div, body > main > .content{
+  max-width:60em;
+  margin:auto;
+}
+body > header, body > footer{
+  box-shadow:0 0 1rem 0 rgb(0,0,0,.1);
+}
+#myLogo{
+  background-color: #d9534f;
+  border-radius: 2rem;
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  font-size: .7rem;
+  padding: .5rem;
+  vertical-align: top;
+}
+
+.navbar-brand{
+  margin-left:1rem;
+}
+
+h1{
+  margin-bottom:1.5rem;
+}
+
+a{
+  color:whitesmoke;
+}
+a:hover{
+  text-decoration: none;
+  color:whitesmoke;
+}
+nav a{
+  color:rgba(255, 255, 255, .5)!important;
+}
+nav a:hover{
+  color:rgba(255, 255, 255, .5);
+  border-bottom:.075rem solid rgba(255, 255, 255, .5);
+}
+.active a{
+  color:inherit!important;
+  border-bottom:.075rem solid whitesmoke;
+}
+.active a:hover, footer a:hover{
+  color:whitesmoke;
+}
+footer a:hover{
+  border-bottom:.075rem solid whitesmoke;
+}
+
+.blockquote{
+  background-color: white;
+  padding:1rem;
+  box-shadow:0 0 2rem 0 rgb(0,0,0,.02);
+}
+
+
+
+table{
+  margin-bottom:1.5rem!important;
+}
+table thead{
+  border-bottom:.15rem solid #ccc;
+  background-color: rgba(0, 0, 0, .01);
+}
+table th, table td {
+  border:0!important;
+}
+
+footer{
+  color:whitesmoke;
+}
+
+footer span{
+  color:rgba(255, 255, 255, .5);
+}

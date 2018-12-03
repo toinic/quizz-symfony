@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{controller_name}}{% endblock %}
+{% block body %}
+  <h1>List of questions</h1>
+
+
+  <table class="table table-striped text-center">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Label</th>
+        <th>Category</th>
+        <th>Difficulty</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for question in questions %}
+        <tr>
+          <td>{{question.id}}</td>
+          <td>{{question.label}}</td>
+          <td>{{question.category.name}}</td>
+          <td>{{question.difficulty}}</td>
+          <td>
+            <a class="btn btn-secondary btn-sm" href="{{path('question_edit', {'id':question.id})}}">Edit</a>
+            <a class="btn btn-danger btn-sm" href="{{path('question_delete', {'id':question.id})}}">Delete</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <a class="btn btn-dark" href="{{path('question_add')}}">Add question</a>
+{% endblock %}
